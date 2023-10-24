@@ -14,7 +14,6 @@ handleValidationErrors, authMiddleware, productController.create);
 // OBTENER UNO
 router.get("/:id", productController.show);
 // BORRAR
-router.delete("/:id", ...productValidators,
-handleValidationErrors, authMiddleware,  productController.destroy);
+router.delete("/:id", authMiddleware,  productController.destroy);
 
 export default router;
